@@ -1,8 +1,10 @@
-﻿namespace SortingAPI.Services
+﻿using System.Threading.Tasks;
+
+namespace SortingAPI.Services
 {
     public interface IFileService
     {
-        void SeveToFile(string fileName, string numbers);
-        string ReadFromFile(string fileName);
+        Task SeveToFile(string numbers);
+        Task<string> ReadFromFile();
     }
 }
